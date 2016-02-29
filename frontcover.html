@@ -2,6 +2,7 @@
 <head>
   <title>Symposium Programme</title>
   <!-- Printable front cover (in HTML) -->
+  <meta charset="UTF-8">
   <meta name="Author" content="Christian Steinruecken">
   <style type="text/css"><!--
   /* base settings */
@@ -147,6 +148,15 @@
                -moz-column-rule: 0.2em dotted rgba(0,0,128,0.35);
                }
   }
+  @media print {
+    cover {
+      display:block;
+      padding:0; margin:0; border:0;
+      page-break-inside:avoid;
+      page-break-before:auto;
+      page-break-after:always;
+    }
+  }
   .black {
     background-color:#000000; color:#ffffff;
   }
@@ -155,13 +165,14 @@
     padding:0.5em;
     padding-left:7.45em;
     padding-right:7.45em;
+    padding-right:4.5em;
   }
   .segment h1, .segment h2 {
     margin:0; padding:0;
   }
   .segment.nopad { padding:0 !important; }
-  h1 { font-size:340%; }
-  h2 { font-size:200%; padding-top:0.75em !important; }
+  h1 { font-size:320%; }
+  h2 { font-size:180%; padding-top:0.75em !important; }
   dim50 { opacity:0.5; }
   dim75 { opacity:0.75; }
   .dg {
@@ -182,7 +193,7 @@
   }
   --></style>
 </head>
-<body><div class="segment dg nopad" style="padding-top:5%;">
+<body><cover><div class="segment dg nopad" style="padding-top:5%;">
   <img src="uc-rgb-wtr-4725x982.png"
        style="height:4em; margin-left:3.40937em; margin-top:3.40937em">
   <div class="vspace" style="height:2.5%; clear:both;"> </div>
@@ -207,5 +218,346 @@
 </div>
 <div class="segment dg bottom" style="height:10%;">
 </div>
-</body>
+</cover>
+<div class="content">
+  <style type="text/css"><!--
+  div.content {
+    page-break-inside:auto;
+    page-break-before:auto;
+    page-break-after:always;
+    font-family:serif;
+    font-size:125%;
+    margin-left:5em;
+    margin-right:5em;
+    background-color:white;
+    color:black;
+  }
+  div.talk {
+    page-break-inside:avoid;
+    page-break-before:auto;
+    page-break-after:auto;
+    text-align:justify;
+    margin:-3.5em 0 0 0;
+    padding:3.5em 0.5em 2em 0.5em;
+    /* border-top:2px solid rgba(127,127,127,0.25); */
+  }
+  a:nth-child(2n+0) div.talk {
+    /* background-color:rgba(223,223,223,0.05); */
+  }
+  a:nth-child(2n+1) div.talk {
+    /* background-color:rgba(32,32,32,0.05); */
+    /* color:blue; */
+  }
+  div.title {
+    font-size:110%; font-weight:500;
+    margin-top:0.5em;
+    padding:0 2.5% 0.35em 0;
+  }
+  div.speaker {
+    font-weight:600;
+  }
+  div.abstract {
+    margin:1em 0.5em 1em 0.5em;
+    font-size:90%;
+    line-height:140%;
+    padding:0 2.5% 0 2.5%;
+  }
+  --></style>
+  <div class="section" style="padding-top:5em;">
+    <h2 style="margin-top:7em;">Programme</h2>
+    <!-- ----------------------------------------------------- -->
+    <a name="brody"><div class="talk">
+      <div class="title">Neural substrates of decision-making in rats</div>
+      <div class="speaker">Carlos Brody</div>
+      <div class="abstract">
+        The most common behavioral observation in decision-making,
+        experienced both in our daily lives and in laboratory
+        settings, is that easy decisions (where we are likely to
+        choose the correct response) are done quickly, whereas
+        difficult decisions (less likely to choose correctly) are
+        much slower. An appealingly simple model was proposed in the
+        behavioral literature many decades ago to account for this
+        observation. This model, sometimes known as the “gradual
+        accumulation of evidence” model, has been used to explain
+        many behavioral data sets. Does the brain implement
+        something well approximated by this model? If so, how does
+        the brain’s network of neurons actually carry out the
+        implementation? We have been using using a combination of
+        computational and experimental approaches with rats to try
+        to answer these questions.
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="counsell"><div class="talk">
+      <div class="title">The Global Calculator: Trying to apply 'Sustainable Energy – without the hot air' to&nbsp;the world</div>
+      <div class="speaker">Tom Counsell</div>
+      <div class="abstract">
+        Could 9 billion people have a rich world standard and style
+        of living and yet avoid the worst effects of climate change,
+        if only we built enough nuclear power stations? or covered
+        enough desert with solar panels? or all used low energy
+        light bulbs? or efficient cars? Inspired by David
+        Mackay’s 'Sustainable Energy – without the hot air’ a team
+        managed by Sophie Hartfield at the UK Department of Energy
+        and Climate Change tried to build an interactive calculator
+        to help people to figure out the answer.  This talk will
+        cover their journey and the results of their attempt.
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="durbin"><div class="talk">
+      <div class="title">New statistical methods for the analysis of genome variation data</div>
+      <div class="speaker">Richard Durbin</div>
+      <div class="abstract">
+        The last two decades have seen an exponential growth in the
+        quantity of DNA sequencing data, at a rate more than twice
+        as fast as Moore’s law for growth in computing power.
+         Individual sequences at one position in the genome are
+        related by descent from a common ancestor in a tree, but
+        this genealogy is made much more complex across the whole
+        genome by recombination, which means that you inherit
+        different sections of your genome from different recent
+        ancestors.  A clean mathematical model exists for the full
+        genealogy but it is too complex to use for inference with
+        data sets available today.  I will discuss various
+        algorithmic and representational innovations introduced to
+        model and exploit genetic relatedness in analysing ever
+        larger amounts of genome data, illustrating them with our
+        work on the Haplotype Reference Consortium, which has
+        assembled over 65,000 whole genome sequences with data at
+        nearly 40 million variable sites.
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="frey"><div class="talk">
+      <div class="title">Why Medicine Needs Deep Learning</div>
+      <div class="speaker">Brendan Frey</div>
+      <div class="abstract">
+        My research on deep inference and learning reaches back to
+        the wake-sleep algorithm, published in 1995, and the paper
+        that David MacKay and I wrote in 1996 showing that belief
+        propagation in graphs with cycles can be used for accurate
+        inference. Most of my time is now spent on genomic medicine.
+        Deep learning will transform medicine, but not in the way
+        that many advocates think.  The amount of data times the
+        mutation frequency divided by the biological complexity and
+        the number of hidden variables is small, so downloading a
+        hundred thousand genomes and training a neural network won't
+        cut it. There is what I call a "genotype-phenotype gap" and
+        the value of closing this gap exceeds Google's $200B ad
+        market. I believe that the only way to bridge this gap is to
+        build machine learning systems that properly incorporate
+        biological knowledge. I'll describe this approach, which is
+        being pursued by dozens of young investigators, has improved
+        our ability to “read the genome”, and will, I believe, be an
+        indispensable component in the future of medicine.
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="herz"><div class="talk">
+      <div class="title">Decoding the population activity of grid cells for spatial localization and goal-directed navigation</div>
+      <div class="speaker">Andreas Herz</div>
+      <div class="abstract">
+        Mammalian grid cells discharge when an animal crosses the
+        points of an imaginary hexagonal grid tessellating the
+        environment. I will show how animals can navigate by reading
+        out a population vector of such activity patterns across
+        multiple spatial scales. The theory explains key
+        experimental results about grid cells, makes testable
+        predictions for future physiological and behavioural
+        experiments, and provides a mathematical foundation for the
+        concept of a "neural metric" for space. For goal-directed
+        navigation, the proposed allocentric grid cell
+        representation can be readily transformed into the
+        egocentric goal coordinates needed for planning movements.<br>
+        <span style="opacity:0.5;">
+        Joint work with Martin Stemmler and Alexander Mathis.<br>
+        http://advances.sciencemag.org/content/1/11/e1500816 
+        <br></span>
+        <!-- href="http://advances.sciencemag.org/content/1/11/e1500816">http://advances.sciencemag.org/content/1/11/e1500816</a -->
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="hinton"><div class="talk">
+      <div class="title">Can sensory cortex do backpropagation?</div>
+      <div class="speaker">Geoff Hinton</div>
+      <div class="abstract">
+        Stochastic gradient descent in multilayer networks of
+        neuron-like units has led to dramatic recent progress in a
+        variety of difficult AI problems. Now that we know how
+        effective backpropagation can be in large networks it is
+        worth reconsidering the widely held belief that the cortex
+        could not possibly be doing backpropagation. Drawing on
+        joint work with Timothy Lillicrap, I will go through the
+        main objections of neuroscientists and show that none of
+        them are hard to overcome if we commit to representing error
+        derivatives as temporal derivatives. This allows the same
+        axon to carry information about the presence of some feature
+        in the input and information about the derivative of the
+        cost function with respect to the input to that neuron. It
+        predicts spike-time dependent plasticity and it also
+        explains why we cannot code velocity by the rate of change
+        of features that represent position.
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="hopfield"><div class="talk">
+      <div class="title">Emergence, dynamics, and behaviour</div>
+      <div class="speaker">John Hopfield</div>
+      <div class="abstract">
+        How do the principles of psychology relate to the activities
+        of 1011 nerve cells in the human brain?  Large physical
+        systems generally have emergent collective behaviours.  Real
+        computers—the brain included—compute by following a change
+        of computer ‘state’ with time.  When that change of state
+        can be described by collective variables, robust dynamics
+        emerge whose mathematical description can be entirely unlike
+        that of the underlying microscopic variables. We illustrate
+        the useful emergent computational dynamics of two elementary
+        neural networks.  The first deals with the problem of
+        variable cadence when recognizing dynamical sensory patterns
+        spread over time.  The second achieves goal-directed
+        behaviour when multiple candidate goals are simultaneously
+        present.
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="kristensson"><div class="talk">
+      <div class="title">Next-generation text entry</div>
+      <div class="speaker">Per Ola Kristensson</div>
+      <div class="abstract">
+        Text entry is a common everyday computing task. However,
+        despite its ubiquitousness it is difficult to devise an
+        efficient text entry method that users are willing to adopt.
+        In this talk I will explain the narrow design space of text
+        entry research and make the case that successful
+        next-generation text entry methods are likely to be based on
+        designs that merge behavioural solution principles with
+        information engineering techniques. I will exemplify this
+        principle with several new text entry methods we have
+        developed for a variety of use-cases.
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="lynas"><div class="talk">
+      <div class="title">Mind the Gap (between science and society) – the case studies of climate, nuclear and GMOs</div>
+      <div class="speaker">Mark Lynas</div>
+      <div class="abstract">
+        Scientists often have a very different idea of risk and
+        benefit from policymakers and the general public. With
+        special attention to three case studies – climate change,
+        nuclear power and genetically modified crops – Mark Lynas
+        looks at the gaps between what scientists understand and
+        what everyone else thinks, and how these gaps can lead to
+        sub-optimal policy outcomes in the real world. 
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="murray"><div class="talk">
+      <div class="title">Pseudo-Marginal Slice Sampling</div>
+      <div class="speaker">Iain Murray</div>
+      <div class="abstract">
+        This talk is about sampling from probability distributions
+        in a challenging setting: we can only compute noisy (but
+        unbiased) estimates of the probability density function at
+        individual settings of variables we choose. Previous work on
+        such "pseudo-marginal" methods have been used in inference
+        problems in genetics, continuous time stochastic processes,
+        hierarchical models, and "doubly-intractable" distributions.
+        I'll present algorithms that are easier to apply than
+        previous work and sometimes work a lot better.<br>
+        <span style="opacity:0.5;">
+        Joint work with Matt Graham. http://arxiv.org/abs/1510.02958</span>
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="sayir"><div class="talk">
+      <div class="title">Codes for efficient data storage on DNA molecules</div>
+      <div class="speaker">Jossy Sayir</div>
+      <div class="abstract">
+        Over the past 6 months I have been working with David MacKay
+        and with Nick Goldman (EBI) on developing a coding system
+        for storing data efficiently on DNA molecules. In this talk,
+        I will focus on David’s initial approach to the problem,
+        which provides an information theoretic background for the
+        achievable storage density and reliability. The assumption
+        for this model is a pure packet loss model with noiseless
+        recovery of packets, which David called the “fountain
+        channel”. This supposes that lower level coding can fully
+        compensate for synthesis, sequencing and amplification
+        errors such as insertions, deletions and substitutions.  An
+        overview of the literature on coding for channels with
+        insertions, deletions and substitutions reveals surprisingly
+        few publications, the majority of which co-authored by David
+        MacKay, and none of which providing unbounded reliability in
+        the information theoretic sense. Hence, I will discuss a
+        model for DNA storage that combines the packet loss with the
+        noisy nature of the recovered packets, and present coding
+        strategies for exploiting this channel that David, Nick and
+        I have been developing. 
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="shokrollahi"><div class="talk">
+      <div class="title">Chordal Codes</div>
+      <div class="speaker">Amin Shokrollahi</div>
+      <div class="abstract">
+        Modern electronic devices consist of a multitude of IC
+        components: the processor, the memory, the RF modem and the
+        baseband chip (in wireless devices), and the graphics
+        processor, are only some examples of components scattered
+        throughout a device. The increase of the volume of digital
+        data that needs to be accessed and processed by such devices
+        calls for ever faster communication between these IC's.
+        Faster communication, however, often translates to higher
+        susceptibility to various types of noise, and inevitably to
+        a higher power consumption in order to combat the noise.
+        This increase in power consumption is, for the most part,
+        far from linear. In this talk I will give a short overview
+        of problems encountered in chip-to-chip communication, and
+        will  advocate the  use  of  a novel class of codes, called
+        “Chordal Codes”, to solve those problems.
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="spiegelhalter"><div class="talk">
+      <div class="title">Communicating risk using whole numbers</div>
+      <div class="speaker">David Spiegelhalter</div>
+      <div class="abstract">
+        David Mackay's “Sustainable Energy – without the hot air” showed
+        the power of translating complex quantities into whole
+        numbers that can be added and easily compared.  Similar
+        ideas have been tried in communicating risk, the units being
+        the Micromort for acute risks and the Microlife for chronic
+        risks.  I shall show how these can be used to see how
+        recklessly dangerous, or how boringly safe, your life is.
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="stegle"><div class="talk">
+      <div class="title">Statistical methods to dissect molecular variation between individuals and single cells</div>
+      <div class="speaker">Oliver Stegle</div>
+      <div class="abstract">
+      Understanding the sources of molecular variation is a major question in molecular biology. What drives the variability of gene expression levels between individuals? How are these molecular differences linked to the genetic makeup of a person or disease? In this talk, I will discuss new statistical approaches to address these questions by interrogating large molecular variation datasets. These methods help to account for unwanted and confounding variation and allow deriving new mechanistic insights by integrating prior information on pathways with genome-wide transcriptome readouts. I will discuss applications both in the genetic analysis of gene expression as well as in single-cell biology.
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+    <a name="winn"><div class="talk">
+      <div class="title">Democratising data science</div>
+      <div class="speaker">John Winn</div>
+      <div class="abstract">
+        There has never been a higher demand for data science and
+        data scientists.  In science, in medicine, in business, in
+        sport, in every area of life, we now have the tools to
+        accumulate large quantities of data, but we lack the
+        corresponding tools to process and understand it.  I will
+        talk about work that we have done in Microsoft Research to
+        try to build such tools, the challenges that we have
+        encountered and suggest how data science might be made much
+        more broadly accessible in the future.
+      </div>
+    </div></a>
+    <!-- ----------------------------------------------------- -->
+  </div>
+</div></body>
 </html>
