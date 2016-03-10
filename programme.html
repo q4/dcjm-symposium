@@ -222,7 +222,7 @@
 <div class="content">
   <div class="section" style="">
     <!-- ----------------------------------------------------- -->
-    <div class="newpage">
+    <div class="newpage" style="margin-left:10%;">
       <div class="vspace" style="height:5em;"></div>
       <h2 style="">Programme</h2>
       <h3>Monday 14th</h3>
@@ -244,7 +244,7 @@
       <tr class="vs"></tr>
       <tr><td class="st">16:00</td><td class="et">16:40</td><td class="ds"><a href="#stegle">Oliver Stegle</a></td></tr>
       <tr><td class="st">16:40</td><td class="et">17:20</td><td class="ds"><a href="#durbin">Richard Durbin</a></td></tr>
-      <tr><td class="st">17:20</td><td class="et"></td><td class="ds"><i>(end of Monday programme)</i></td></tr>
+      <tr><td class="st">17:20</td><td class="et none"></td><td class="ds"><i>(end of Monday programme)</i></td></tr>
       <tr class="vs"></tr>
       <tr><td class="st">19:15</td><td class="et">19:55</td><td class="ds"><i>Pre-dinner drinks (Trinity College)</i></td></tr>
       <tr><td class="st">20:00</td><td class="et">22:30</td><td class="ds"><i>Dinner (Trinity College)</i></td></tr>
@@ -252,7 +252,7 @@
       <br><br>
     </div>
     <!-- ----------------------------------------------------- -->
-    <div class="newpage">
+    <div class="newpage" style="margin-left:10%;">
       <div class="vspace" style="height:5em;"></div>
       <h2 style="padding-top:5em;">&nbsp;</h2>
       <h3>Tuesday 15th</h3>
@@ -274,15 +274,17 @@
       <tr class="vs"></tr>
       <!-- <tr><td class="st">16:30</td><td class="et">16:45</td><td class="ds"><i>Group photo</i></td></tr> -->
       <tr><td class="st">16:30</td><td class="et">17:30</td><td class="ds"><i>Coffee and cake reception</i></td></tr>
-      <tr><td class="st">17:30</td><td class="et"></td><td class="ds"><i>Departure</i></td></tr>
+      <tr><td class="st">17:30</td><td class="et none"></td><td class="ds"><i>Departure</i></td></tr>
       </table>
     </div>
     <!-- ----------------------------------------------------- -->
     <style type="text/css"><!--
         table.schedule a[href] { color:inherit; text-decoration:none; }
         table tr, table td { font-size:inherit; }
-        td.st { padding:0 1em; }
-        td.et { padding:0 1em; opacity:0.6; }
+        td.st { padding:0 0.5em 0 1em; }
+        td.et { padding:0 1em 0 0; opacity:1.0; }
+        td.et:before { content: '–'; text-align:center; margin-right:0.5em; }
+        td.et.none:before { content: ''; margin-right:0.5em; }
         td.ds { padding:0 1em; }
         tr       { opacity:1.0; height:1.75em; vertical-align:top; }
         tr td.st, tr td.et, tr td.ds { padding-top:0.25em; padding-bottom:0.25em; }
@@ -331,16 +333,17 @@
       /* color:blue; */
     }
     div.title {
-      font-size:110%; font-weight:500;
+      font-size:110%; font-weight:600;
       margin-top:0.5em;
-      padding:0 2.5% 0.35em 0;
+      padding:1.5em 2.5% 0.35em 0;
     }
     div.speaker {
-      font-weight:600;
+      font-weight:500;
+      font-style:italic;
     }
     div.abstract {
       margin:1em 0.5em 1em 0.5em;
-      font-size:90%;
+      font-size:95%;
       line-height:140%;
       padding:0 2.5% 0 2.5%;
     }
@@ -429,13 +432,13 @@
     </div>
     <!-- ----------------------------------------------------- -->
     <a name="lynas"></a><div class="talk">
-      <div class="title">Mind the Gap (between science and society) - the case studies of climate, nuclear and GMOs</div>
+      <div class="title">Mind the Gap (between science and society) – the case studies of climate, nuclear and GMOs</div>
       <div class="speaker">Mark Lynas</div>
       <div class="abstract">
         Scientists often have a very different idea of risk and
         benefit from policymakers and the general public. With
-        special attention to three case studies - climate change,
-        nuclear power and genetically modified crops - Mark Lynas
+        special attention to three case studies – climate change,
+        nuclear power and genetically modified crops – Mark Lynas
         looks at the gaps between what scientists understand and
         what everyone else thinks, and how these gaps can lead to
         sub-optimal policy outcomes in the real world. 
