@@ -1,0 +1,246 @@
+<html>
+<head>
+  <title>Symposium Programme: Front Cover</title>
+  <!-- Printable front cover (in HTML) -->
+  <meta charset="UTF-8">
+  <meta name="Author" content="Christian Steinruecken">
+  <style type="text/css"><!--
+  /* base settings */
+  body {
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+    background-color: #dcebf7; color: #000000;
+    background-color: #91B9A4; color: #000000;
+    background-color: #ffffff; color: #666666;
+  }
+  .page_ind:after { content: '?'; }
+  @media screen { .corner { padding: 0.5em; } }
+  @media print { .corner { padding: 0.5em; } }
+  @media screen and (min-width: 100em) {
+    body { font-size: 200%; }
+    .page_ind:after { content: '> 100em'; }
+  }
+  @media screen and (max-width: 100em) {
+    body { font-size: 160%; }
+    .page_ind:after { content: '< 100em'; }
+  }
+  @media screen and (max-width: 90em) {
+    body { font-size: 150%; }
+    .page_ind:after { content: '< 90em'; }
+  }
+  @media screen and (max-width: 80em) {
+    body { font-size: 130%; }
+    .page_ind:after { content: '< 80em'; }
+  }
+  @media screen and (max-width: 70em) {
+    body { font-size: 120%; }
+    .page_ind:after { content: '< 70em'; }
+  }
+  @media screen and (max-width: 60em) {
+    body { font-size: 110%; }
+    .page_ind:after { content: '< 60em'; }
+  }
+  /* PAGE SIZE SPECIFIC SETTINGS */
+
+  /* ISO 216 PAGE SIZES [mm]
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    4A0     1682 × 2378     –            –         –       –
+    2A0     1189 × 1682     –            –         –       –
+    A0       841 × 1189     B0      1000 × 1414    C0      917 × 1297
+    A1       594 × 841      B1       707 × 1000    C1      648 × 917
+    A2       420 × 594      B2       500 × 707     C2      458 × 648
+    A3       297 × 420      B3       353 × 500     C3      324 × 458
+    A4       210 × 297      B4       250 × 353     C4      229 × 324
+    A5       148 × 210      B5       176 × 250     C5      162 × 229
+    A6       105 × 148      B6       125 × 176     C6      114 × 162
+    A7        74 × 105      B7        88 × 125     C7       81 × 114
+    A8        52 × 74       B8        62 × 88      C8       57 × 81
+    A9        37 × 52       B9        44 × 62      C9       40 × 57
+    A10       26 × 37       B10       31 × 44      C10      28 × 40
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  */
+  @media print and (max-width: 2377mm) and (max-height: 1680mm) { /* 2A0 L */
+    body { font-size: 566%; }
+    .page_ind:after { content: '2A0 L'; }
+  }
+  @media print and (max-width: 1680mm) and (max-height: 2377mm) { /* 2A0 P */
+    body { font-size: 566%; }
+    .page_ind:after { content: '2A0 P'; }
+  }
+  @media print and (max-width: 1680mm) and (max-height: 1188mm) { /* A0 L */
+    body { font-size: 400%; }
+    .page_ind:after { content: 'A0 L'; }
+  }
+  @media print and (max-width: 1188mm) and (max-height: 1680mm) { /* A0 P */
+    body { font-size: 400%; }
+    .page_ind:after { content: 'A0 P'; }
+  }
+  @media print and (max-width: 1188mm) and (max-height: 840mm) { /* A1 L */
+    body { font-size: 283%; }
+    .page_ind:after { content: 'A1 L'; }
+  }
+  @media print and (max-width: 840mm) and (max-height: 1188mm) { /* A1 P */
+    body { font-size: 283%; }
+    .page_ind:after { content: 'A1 P'; }
+  }
+  @media print and (max-width: 840mm) and (max-height: 593mm) { /* A2 L */
+    body { font-size: 200%; }
+    .page_ind:after { content: 'A2 L'; }
+  }
+  @media print and (max-width: 593mm) and (max-height: 840mm) { /* A2 P */
+    body { font-size: 200%; }
+    .page_ind:after { content: 'A2 P'; }
+  }
+  @media print and (max-width: 593mm) and (max-height: 419mm) { /* A3 L */
+    body { font-size: 141%; }
+    .page_ind:after { content: 'A3 L'; }
+  }
+  @media print and (max-width: 419mm) and (max-height: 593mm) { /* A3 P */
+    body { font-size: 141%; }
+    .page_ind:after { content: 'A3 P'; }
+  }
+  @media print and (max-width: 419mm) and (max-height: 296mm) { /* A4 L */
+    body { font-size: 100%; }
+    .page_ind:after { content: 'A4 L'; }
+  }
+  @media print and (max-width: 296mm) and (max-height: 419mm) { /* A4 P */
+    body { font-size: 100%; }
+    .page_ind:after { content: 'A4 P'; }
+  }
+  @media print and (max-width: 296mm) and (max-height: 209mm) { /* A5 L */
+    body { font-size: 71%; }
+    .page_ind:after { content: 'A5 L'; }
+  }
+  @media print and (max-width: 209mm) and (max-height: 296mm) { /* A5 P */
+    body { font-size: 71%; }
+    .page_ind:after { content: 'A5 P'; }
+  }
+  @media print and (max-width: 209mm) and (max-height: 147mm) { /* A6 L */
+    body { font-size: 50%; }
+    .page_ind:after { content: 'A6 L'; }
+  }
+  @media print and (max-width: 147mm) and (max-height: 209mm) { /* A6 P */
+    body { font-size: 50%; }
+    .page_ind:after { content: 'A6 P'; }
+  }
+  @media print and (min-width: 2378mm) and (min-height: 1681mm) { /* >2A0 L */
+    body { font-size: 800%; }
+    .page_ind:after { content: 'huge'; }
+  }
+  @media print and (min-width: 1681mm) and (min-height: 2378mm) { /* >2A0 P */
+    body { font-size: 800%; }
+    .page_ind:after { content: 'huge'; }
+  }
+  @media (orientation: landscape)  {
+    .orient_ind:after { content: ' landscape'; }
+    .columns { -webkit-column-count: 3; -webkit-column-gap: 0.25em;
+               -webkit-column-rule: 0.2em dotted #a0c9eb; /* rgba(0,0,128,0.15); */
+               -moz-column-count: 3; -moz-column-gap: 0.5em;
+               -moz-column-rule: 0.2em dotted #a0c9eb; /* rgba(0,0,128,0.35); */
+               }
+  }
+  @media (orientation: portrait)  {
+    .orient_ind:after { content: ' portrait'; }
+    .columns { -webkit-column-count: 2; -webkit-column-gap: 0.25em;
+               -webkit-column-rule: 0.2em dotted rgba(0,0,128,0.15);
+               -moz-column-count: 2; -moz-column-gap: 0.25em;
+               -moz-column-rule: 0.2em dotted rgba(0,0,128,0.35);
+               }
+  }
+  @media print {
+    cover {
+      display:block;
+      padding:0; margin:0; border:0;
+      page-break-inside:avoid;
+      page-break-before:auto;
+      page-break-after:always;
+    }
+  }
+  .black {
+    background-color:#000000; color:#ffffff;
+  }
+  .segment {
+    margin:0;
+    padding:0.5em;
+    padding-left:7.45em;
+    padding-right:7.45em;
+    padding-right:4.5em;
+  }
+  .segment h1, .segment h2 {
+    margin:0; padding:0;
+  }
+  .segment.nopad { padding:0 !important; }
+  h1 { font-size:360%; font-size:226%;
+       margin-bottom:0; padding-bottom:0.5em; }
+  h2 { font-size:180%; font-size:127%;
+       line-height:140%;
+       padding-top:0em !important;
+       margin-top:0em !important; }
+  dim50 { color:rgba(255,255,255,0.5); }
+  dim75 { color:rgba(255,255,255,0.75); }
+  .dg {
+    background-color:#106470; color:#ffffff;
+    background-color:#117a72; color:#ffffff;
+  }
+  .mg {
+    background-color:#18a69a; color:#ffffff;
+  }
+  .lg {
+    background-color:#1894a6; color:#ffffff;
+    background-color:#18a69a; color:#ffffff;
+    background-color:#5db3ab; color:#ffffff;
+  }
+  .bottom {
+    position:absolute;
+    left:0; right:0; bottom:0;
+  }
+  .side {
+    display:table-cell; vertical-align:top;
+    border:none;
+    width:50vw !important;
+    margin:0;
+  }
+  --></style>
+</head>
+<body><cover>
+<div class="dg nopad">
+  <div class="back side" style="padding-top:2.5%;">
+  </div>
+  <div class="front side" style="padding-top:0;">
+  <!-- University logo:
+       Width: 4725 pixels, height: 982 pixels.
+       Text starts at x=992 (20.99%)
+       Width of crest: 837 pixels (17.7%), height: 970 pixels.
+       Space above logo (to top edge of cover) should be
+          837/982 * 4em = 3.40937em.
+       Space left of logo (to left edge of cover) should be the same.
+       All other text on the page should be aligned to
+       (992+837)/982 * 4em = 7.4501em from the left margin.
+  -->
+    <img src="uc-rgb-wtr-4725x982.png"
+         style="height:2.828427em; margin-left:2.4107886em; margin-top:2.4107886em">
+    <div class="vspace" style="height:1.205394em; clear:both;"> </div>
+  </div>
+</div>
+<div class="lg" style="padding-top:0;">
+  <div class="back side" style="padding-top:2em;">
+    <center>
+      <img src="inflogo-bg-teal.8133x8000.jpg" style="height:20em; width:auto; margin:auto;">
+    </center>
+  </div>
+  <div class="front side" style="padding-top:8em;">
+    <div style="padding-left:5.2680175em; padding-right:4em;">
+    <h1>Information, Inference, and Energy</h1>
+    <h2><dim50>A symposium to celebrate the work of</dim50><br>
+        <dim75>Professor Sir David MacKay FRS</dim75></h2>
+    <div class="vspace" style="height:5em; clear:both;"> </div>
+  </div>
+</div>
+<div class="segment mg" style="">
+</div>
+  <div class="segment dg bottom" style="height:5%;">
+  </div>
+</div>
+</cover></body>
+</html>
