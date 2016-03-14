@@ -71,9 +71,16 @@
   ul.speakers li:hover {
     background-color:rgba(0,0,0,0.05);
   }
+  div.programme {
+  }
+  div.programme > h2 { margin-top:1.5em; margin-bottom:1em; }
   div.talk {
-    padding:1em 0.5em;
     border-top:2px solid rgba(127,127,127,0.25);
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    background-color:rgba(0,0,0,0.02); 
+    margin:-0.5em -1em 0.5em -1em;
+    padding:0.4em 1em;
   }
   div.talk:nth-child(4n+0) {
     background-color:rgba(32,32,32,0.05);
@@ -122,8 +129,15 @@
     ul.speakers li:after { content:', '; }
     ul.speakers li:last-child:after { content:'.'; }
   }
+
   @media (max-width:35em) {
     ul.speakers { -webkit-column-count:1; column-count:1; }
+    div.talk {
+    }
+    div.abstract {
+      margin-left:0;  margin-right:0;
+      padding-left:0; padding-right:0;
+    }
   }
   @media (min-width:35em) {
     ul.speakers { -webkit-column-count:2; column-count:2; }
@@ -332,7 +346,7 @@ Su Mo Tu We Th Fr Sa
 </div>
 
 
-<div class="section">
+<div class="section programme">
   <h2>Programme</h2>
   <!-- ----------------------------------------------------- -->
   <a name="spiegelhalter"></a><div class="talk">
