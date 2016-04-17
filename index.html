@@ -131,6 +131,12 @@
     line-height:140%;
     padding:0 2.5% 0 2.5%;
   }
+  div.vidlink {
+    margin:0.9em 0.5em 1em 0.5em;
+    font-size:90%;
+    line-height:120%;
+    padding:0 2.5% 0 2.5%;
+  }
   @media screen {
     body {
       font-family: sans-serif;
@@ -153,6 +159,7 @@
     ul.speakers li { display:inline; padding:0; margin:0; }
     ul.speakers li:after { content:', '; }
     ul.speakers li:last-child:after { content:'.'; }
+    div.vidlink a:after { content:':  ' attr(href); }
   }
   @media (max-width:35em) {
     ul.speakers { -webkit-column-count:1; column-count:1; }
@@ -297,7 +304,7 @@ Su Mo Tu We Th Fr Sa
   <h2>Links and downloads</h2>
   <ul>
     <li><a href="#schedule">Speakers + Schedule</a></li>
-    <li><a href="#abstracts">Talks abstracts</a></li>
+    <li><a href="#abstracts">Abstracts + Videos</a></li>
     <li><a href="Symposium-Programme.pdf">Symposium booklet (PDF, 316 KB)</a></li>
     <li><a href="Symposium-Programme-COVER.pdf">Symposium booklet cover (PDF, 2819 KB)</a></li>
     <li><a href="djcm-symposium-screen2b.2560x1440.png">Symposium welcome screen (PNG, 312 KB, 2560×1440 pixels)</a></li>
@@ -305,6 +312,7 @@ Su Mo Tu We Th Fr Sa
     <li><a href="http://itila.blogspot.co.uk/2016/04/perhaps-my-last-post-well-see.html">David MacKay's personal blog</a><br>
   </ul>
 </div>
+
 
 <div class="section">
   <style type="text/css"><!--
@@ -324,7 +332,7 @@ Su Mo Tu We Th Fr Sa
     div.half { display:table-cell; width:40%; padding-left:0; padding-right:0; }
   }
   --></style>
-  <a name="schedule">
+  <a name="schedule"></a>
   <h2>Schedule</h2>
 
   <div class="half">
@@ -384,7 +392,7 @@ Su Mo Tu We Th Fr Sa
 
 <div class="section programme">
   <a name="abstracts"></a>
-  <h2>Abstracts</h2>
+  <h2>Abstracts and Videos</h2>
   <!-- ----------------------------------------------------- -->
   <a name="spiegelhalter"></a><div class="talk">
     <div class="title">Communicating risk using whole numbers</div>
@@ -397,6 +405,9 @@ Su Mo Tu We Th Fr Sa
       the Micromort for acute risks and the Microlife for chronic
       risks.  I shall show how these can be used to see how
       recklessly dangerous, or how boringly safe, your life is.
+    </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/t-K8EYxHjEo">Video</a>
     </div>
   </div>
   <!-- ----------------------------------------------------- -->
@@ -414,6 +425,9 @@ Su Mo Tu We Th Fr Sa
       and Climate Change tried to build an interactive calculator
       to help people to figure out the answer.  This talk will
       cover their journey and the results of their attempt.
+    </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/dCDTqVFcfsI">Video</a>
     </div>
   </div>
   <!-- ----------------------------------------------------- -->
@@ -436,6 +450,9 @@ Su Mo Tu We Th Fr Sa
       of problems encountered in chip-to-chip communication, and
       will  advocate the  use  of  a novel class of codes, called
       “Chordal Codes”, to solve those problems.
+    </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/L8xvnjiybQs">Video</a>
     </div>
   </div>
   <!-- ----------------------------------------------------- -->
@@ -464,6 +481,27 @@ Su Mo Tu We Th Fr Sa
       strategies for exploiting this channel that David, Nick and
       I have been developing. 
     </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/TIlqFH0tvfQ">Video</a>
+    </div>
+  </div>
+  <!-- ----------------------------------------------------- -->
+  <a name="sayir"></a><div class="talk">
+    <div class="title">Inverse Calculators</div>
+    <div class="speaker">Christian Steinruecken</div>
+    <div class="abstract">
+      A traditional calculator evaluates symbolic mathematical expressions (such as √5)
+      and produces a decimal number (such as 2.2360679775).
+      An inverse calculator does the opposite: it starts from the number
+      and suggests how the number might have been calculated in the first place.
+      This talk explains how to build such an inverse calculator, and
+      why having one might be useful.
+      <br> 
+      <i>(This 10-minute surpise talk was not in the printed programme.)</i>
+    </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/HsJmtpzJljQ">Video</a>
+    </div>
   </div>
   <!-- ----------------------------------------------------- -->
   <a name="lynas"></a><div class="talk">
@@ -477,6 +515,9 @@ Su Mo Tu We Th Fr Sa
       looks at the gaps between what scientists understand and
       what everyone else thinks, and how these gaps can lead to
       sub-optimal policy outcomes in the real world. 
+    </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/7AKrD9y0Chc">Video</a>
     </div>
   </div>
   <!-- ----------------------------------------------------- -->
@@ -503,6 +544,9 @@ Su Mo Tu We Th Fr Sa
       our ability to “read the genome”, and will, I believe, be an
       indispensable component in the future of medicine.
     </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/bYTq4QEDA78">Video</a>
+    </div>
   </div>
   <!-- ----------------------------------------------------- -->
   <a name="stegle"></a><div class="talk">
@@ -523,6 +567,9 @@ Su Mo Tu We Th Fr Sa
       I will illustrate these approaches in applications to large
       datasets consisting of tens of thousands of cells and discuss
       their relationship to methods from population genetics. 
+    </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/bfBl0naA7t4">Video</a>
     </div>
   </div>
   <!-- ----------------------------------------------------- -->
@@ -548,6 +595,9 @@ Su Mo Tu We Th Fr Sa
       assembled over 65,000 whole genome sequences with data at
       nearly 40 million variable sites.
     </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/Xz6uw6w8YYI">Video</a>
+    </div>
   </div>
   <!-- ----------------------------------------------------- -->
   <!-- ----------------------------------------------------- -->
@@ -571,6 +621,9 @@ Su Mo Tu We Th Fr Sa
       behaviour when multiple candidate goals are simultaneously
       present.
     </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/vTurUGqD_Lo">Video</a>
+    </div>
   </div>
   <!-- ----------------------------------------------------- -->
   <a name="brody"></a><div class="talk">
@@ -592,6 +645,9 @@ Su Mo Tu We Th Fr Sa
       implementation? We have been using using a combination of
       computational and experimental approaches with rats to try
       to answer these questions.
+    </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/IksmSx856yY">Video</a>
     </div>
   </div>
   <!-- ----------------------------------------------------- -->
@@ -617,6 +673,9 @@ Su Mo Tu We Th Fr Sa
       <br></span>
       <!-- href="http://advances.sciencemag.org/content/1/11/e1500816">http://advances.sciencemag.org/content/1/11/e1500816</a -->
     </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/pOK2vmv5l-c">Video</a>
+    </div>
   </div>
   <!-- ----------------------------------------------------- -->
   <a name="kristensson"></a><div class="talk">
@@ -634,6 +693,23 @@ Su Mo Tu We Th Fr Sa
       principle with several new text entry methods we have
       developed for a variety of use-cases.
     </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/QpCJLaBImq0">Video</a>
+    </div>
+  </div>
+  <!-- ----------------------------------------------------- -->
+  <a name="blackwell"></a><div class="talk">
+    <div class="title">How <i style="font-variant:small-caps; font-style:normal; text-transform:uppercase;">Dasher</i> has touched lives</div>
+    <div class="speaker">Alan Blackwell</div>
+    <div class="abstract">
+      Dasher is an information-efficient text-entry interface, driven by
+      natural continuous pointing gestures. Dasher is a competitive
+      text-entry system wherever a full-size keyboard cannot be used.<br>
+      <i>(This 7-minute surprise talk was not in the printed programme.)</i>
+    </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/QxFEUk3J89Q">Video</a>
+    </div>
   </div>
   <!-- ----------------------------------------------------- -->
   <a name="winn"></a><div class="talk">
@@ -649,6 +725,9 @@ Su Mo Tu We Th Fr Sa
       try to build such tools, the challenges that we have
       encountered and suggest how data science might be made much
       more broadly accessible in the future.
+    </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/jZgQGV2j9Bc">Video</a>
     </div>
   </div>
   <!-- ----------------------------------------------------- -->
@@ -668,6 +747,9 @@ Su Mo Tu We Th Fr Sa
       <span style="opacity:0.5;">
       Joint work with Matt Graham.
       <a class="url" href="http://arxiv.org/abs/1510.02958">http://arxiv.org/abs/1510.02958</a></span>
+    </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/HhGJZmn-5SU">Video</a>
     </div>
   </div>
   <!-- ----------------------------------------------------- -->
@@ -692,6 +774,9 @@ Su Mo Tu We Th Fr Sa
       explains why we cannot code velocity by the rate of change
       of features that represent position.
     </div>
+    <div class="vidlink">
+      <a href="https://youtu.be/cBLk5baHbZ8">Video</a>
+    </div>
   </div>
   <!-- ----------------------------------------------------- -->
 </div>
@@ -701,7 +786,7 @@ Su Mo Tu We Th Fr Sa
   <a name="reminisciences"><h2>Reminisciences</h2></a>
   <!-- ----------------------------------------------------- -->
   <a name="rem1"></a>
-  <b>Brief Reminiscences I:</b><br>
+  <b>Brief Reminiscences I</b> (<a href="https://youtu.be/TCGPM5As9kE">Video</a>)<br>
   <ul>
     <li>Neil Lawrence</li>
     <li>John Skilling</li>
@@ -709,7 +794,7 @@ Su Mo Tu We Th Fr Sa
     <li>Graeme Mitchison</li>
   </ul>
   <a name="rem2"></a>
-  <b>Brief Reminiscences II:</b><br>
+  <b>Brief Reminiscences II</b> (<a href="https://youtu.be/js7OohLx_ds">Video</a>)<br>
   <ul>
     <li>Hanna Wallach</li>
     <li>Robert MacKay</li>
@@ -717,7 +802,7 @@ Su Mo Tu We Th Fr Sa
     <li>Carl Rasmussen</li>
   </ul>
   <a name="rem3"></a>
-  <b>Brief Reminiscences III:</b><br>
+  <b>Brief Reminiscences III</b> (<a href="https://youtu.be/7M1o7yeiPhg">Video</a>)<br>
   <ul>
     <li>Ken Miller</li>
     <li>Harry Bhadeshia</li>
