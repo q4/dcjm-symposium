@@ -145,6 +145,11 @@
       margin:0;
       padding:0.5em 1em 0em 1em;
     }
+    div.vidlink a[href^='https://you'] { border-radius:0.25ex; padding:0.5em; }
+    /* film frames: 🎞, clapper board: 🎬. */
+    a[href^='https://you']:before { content:'▶'; padding:0em 0.5em 0em 0.5em; } /* triangle */
+    a[href^='https://you']:before { color:rgb(192,0,0); }
+    a[href^='https://you']:hover:before { color:rgb(208,0,104); opacity:1.0; } /* clapper board */
   }
   @media print {
     body {
@@ -300,8 +305,8 @@ Su Mo Tu We Th Fr Sa
 <div class="section">
   <h2>Links and downloads</h2>
   <ul>
-    <li><a href="#schedule">Speakers + Schedule</a></li>
-    <li><a href="#abstracts">Abstracts + Videos</a></li>
+    <li><a href="#schedule">Programme / Schedule / Videos</a></li>
+    <li><a href="#abstracts">Abstracts / Videos</a></li>
     <li><a href="Symposium-Programme.pdf">Symposium booklet (PDF, 316 KB)</a></li>
     <li><a href="Symposium-Programme-COVER.pdf">Symposium booklet cover (PDF, 2819 KB)</a></li>
     <li><a href="djcm-symposium-screen2b.2560x1440.png">Symposium welcome screen (PNG, 312 KB, 2560×1440 pixels)</a></li>
@@ -315,48 +320,60 @@ Su Mo Tu We Th Fr Sa
   <style type="text/css"><!--
   table tr, table td { font-size:inherit; }
   td.st { padding:0 1em; }
-  td.et { padding:0 1em; opacity:0.6; }
-  td.ds { padding:0 1em; }
+  td.et { padding:0 1em 0 1em; opacity:0.5; }
+  td.ds { padding:0 1em 0 0.5em; }
+  td.vl { padding:0 0; }
+  td.ve { padding:0 0; }
   tr       { opacity:1.0; height:1.75em; vertical-align:top; }
-  tr td.st, tr td.et, tr td.ds { padding-top:0.25em; padding-bottom:0.25em; }
+  tr td.st, tr td.et, tr td.vl, tr td.ds { padding-top:0.25em; padding-bottom:0.25em; }
   tr.vs { height: 0.75em !important; }
   tr:hover { background-color:rgba(93,179,171,0.4); }
   tr:hover a[href] { color:rgba(17,122,114,1.0); }
+  td.vl a[href^='https://you']:before { content:'▶'; color:rgb(192,0,0); padding:0 1em; }
+  tr:hover td.vl a[href^='https://you']:before { content:'▶'; color:rgb(204,128,128); }
+  tr:hover td.vl a[href^='https://you']:hover:before { content:'▶'; color:rgb(255,255,255); }
+  tr:hover td.vl:hover { background-color:rgba(192,0,0,1.0); color:rgb(255,255,255); }
+  tr:hover td.vl:hover a[href^='https://you']:before { color:rgb(255,255,255); }
+  tr:hover td.vl:hover a[href^='https://you']:hover:before { background-color:none; color:rgb(255,255,255); }
   @media (max-width:30em) {
     td.et { display:none; }
+  }
+  @media print {
+    td.vl { display:none; }
   }
   @media (min-width:60em) {
     div.half { display:table-cell; width:40%; padding-left:0; padding-right:0; }
   }
   --></style>
   <a name="schedule"></a>
-  <h2>Schedule</h2>
-
+  <h2>Programme</h2>
+  <small>Videos can be viewed by clicking the <span style="opacity:0.5;">▶</span> symbols.</small><br>
   <div class="half">
     <h3>Monday 14th</h3>
     <table class="schedule" border="0" cellspacing="0" style="color:inherit; border-collapse:collapse; font-size:inherit;">
-    <tr><td class="st">09:15</td><td class="et">09:30</td><td class="ds">Welcome &amp; introduction</td></tr>
-    <tr><td class="st">09:30</td><td class="et">10:00</td><td class="ds"><a href="#spiegelhalter">David Spiegelhalter</a></td></tr>
-    <tr><td class="st">10:10</td><td class="et">10:50</td><td class="ds"><a href="#counsell">Tom Counsell</a></td></tr>
-    <tr><td class="st">10:50</td><td class="et">11:20</td><td class="ds"><i>Coffee &amp; Tea</i></td></tr>
+    <tr><td class="st">09:15</td><td class="et">09:20</td><td class="vl"><a href="https://youtu.be/QRugw2Z6lAM?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><i>Welcome (Andy Hopper)</i></td></tr>
+    <tr><td class="st">09:20</td><td class="et">09:30</td><td class="vl"><a href="https://youtu.be/ak1PKPTG_BU?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><i>Introduction (Zoubin Ghahramani)</i></td></tr>
+    <tr><td class="st">09:30</td><td class="et">10:00</td><td class="vl"><a href="https://youtu.be/t-K8EYxHjEo?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#spiegelhalter">David Spiegelhalter</a></td></tr>
+    <tr><td class="st">10:10</td><td class="et">10:50</td><td class="vl"><a href="https://youtu.be/dCDTqVFcfsI?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></td><td class="ds"><a href="#counsell">Tom Counsell</a></td></tr>
+    <tr><td class="st">10:50</td><td class="et">11:20</td><td class="ve"></td><td class="ds"><i>Coffee &amp; Tea</i></td></tr>
     <tr class="vs"></tr>
-    <tr><td class="st">11:20</td><td class="et">12:00</td><td class="ds"><a href="#shokrollahi">Amin Shokrollahi</a></td></tr>
-    <tr><td class="st">12:00</td><td class="et">12:30</td><td class="ds"><a href="#sayir">Jossy Sayir</a></td></tr>
-    <tr><td class="st">12:30</td><td class="et">12:40</td><td class="ds"><a href="#steinruecken">Christian Steinruecken</a></td></tr>
-    <tr><td class="st">12:40</td><td class="et">12:50</td><td class="ds"><a href="#rem1"><i>Brief reminiscences I</i></a></td></tr>
-    <tr><td class="st">13:00</td><td class="et">14:00</td><td class="ds"><i>Lunch</i></td></tr>
+    <tr><td class="st">11:20</td><td class="et">12:00</td><td class="vl"><a href="https://youtu.be/L8xvnjiybQs?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#shokrollahi">Amin Shokrollahi</a></td></tr>
+    <tr><td class="st">12:00</td><td class="et">12:30</td><td class="vl"><a href="https://youtu.be/TIlqFH0tvfQ?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#sayir">Jossy Sayir</a></td></tr>
+    <tr><td class="st">12:30</td><td class="et">12:40</td><td class="vl"><a href="https://youtu.be/HsJmtpzJljQ?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#steinruecken">Christian Steinruecken</a>*</td></tr>
+    <tr><td class="st">12:40</td><td class="et">12:50</td><td class="vl"><a href="https://youtu.be/TCGPM5As9kE?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#rem1"><i>Brief reminiscences I</i></a></td></tr>
+    <tr><td class="st">13:00</td><td class="et">14:00</td><td class="ve"></td><td class="ds"><i>Lunch</i></td></tr>
     <tr class="vs"></tr>
-    <tr><td class="st">14:00</td><td class="et">14:40</td><td class="ds"><a href="#lynas">Mark Lynas</a></td></tr>
-    <tr><td class="st">14:40</td><td class="et">15:20</td><td class="ds"><a href="#frey">Brendan Frey</a></td></tr>
-    <tr><td class="st">15:20</td><td class="et">15:30</td><td class="ds"><a href="#rem2"><i>Brief reminiscences II</i></a></td></tr>
-    <tr><td class="st">15:30</td><td class="et">16:00</td><td class="ds"><i>Coffee &amp; Tea</i></td></tr>
+    <tr><td class="st">14:00</td><td class="et">14:40</td><td class="vl"><a href="https://youtu.be/7AKrD9y0Chc?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#lynas">Mark Lynas</a></td></tr>
+    <tr><td class="st">14:40</td><td class="et">15:20</td><td class="vl"><a href="https://youtu.be/bYTq4QEDA78?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#frey">Brendan Frey</a></td></tr>
+    <tr><td class="st">15:20</td><td class="et">15:30</td><td class="vl"><a href="https://youtu.be/js7OohLx_ds?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#rem2"><i>Brief reminiscences II</i></a></td></tr>
+    <tr><td class="st">15:30</td><td class="et">16:00</td><td class="ve"></td><td class="ds"><i>Coffee &amp; Tea</i></td></tr>
     <tr class="vs"></tr>
-    <tr><td class="st">16:00</td><td class="et">16:40</td><td class="ds"><a href="#stegle">Oliver Stegle</a></td></tr>
-    <tr><td class="st">16:40</td><td class="et">17:20</td><td class="ds"><a href="#durbin">Richard Durbin</a></td></tr>
-    <tr><td class="st">17:20</td><td class="et"></td><td class="ds"><i>(end of Monday programme)</i></td></tr>
+    <tr><td class="st">16:00</td><td class="et">16:40</td><td class="vl"><a href="https://youtu.be/bfBl0naA7t4?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#stegle">Oliver Stegle</a></td></tr>
+    <tr><td class="st">16:40</td><td class="et">17:20</td><td class="vl"><a href="https://youtu.be/Xz6uw6w8YYI?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#durbin">Richard Durbin</a></td></tr>
+    <tr><td class="st">17:20</td><td class="et"></td><td class="ve"></td><td class="ds"><i>(end of Monday programme)</i></td></tr>
     <tr class="vs"></tr>
-    <tr><td class="st">19:15</td><td class="et">19:55</td><td class="ds"><i>Pre-dinner drinks (Trinity College)</i></td></tr>
-    <tr><td class="st">20:00</td><td class="et">22:30</td><td class="ds"><i>Dinner (Trinity College)</i></td></tr>
+    <tr><td class="st">19:15</td><td class="et">19:55</td><td class="ve"></td><td class="ds"><i>Pre-dinner drinks (Trinity College)</i></td></tr>
+    <tr><td class="st">20:00</td><td class="et">22:30</td><td class="ve"></td><td class="ds"><i>Dinner (Trinity College)</i></td></tr>
     </table>
     <br><br>
   </div>
@@ -365,28 +382,29 @@ Su Mo Tu We Th Fr Sa
     <h3>Tuesday 15th</h3>
     <table class="schedule" border="0" cellspacing="0" style="color:inherit; border-collapse:collapse; font-size:inherit;">
     <tr class="vs"></tr>
-    <tr><td class="st">09:30</td><td class="et">10:10</td><td class="ds"><a href="#hopfield">John Hopfield</a></td></tr>
-    <tr><td class="st">10:10</td><td class="et">10:50</td><td class="ds"><a href="#brody">Carlos Brody</a></td></tr>
-    <tr><td class="st">10:50</td><td class="et">11:20</td><td class="ds"><i>Coffee</i></td></tr>
+    <tr><td class="st">09:30</td><td class="et">10:10</td><td class="vl"><a href="https://youtu.be/vTurUGqD_Lo?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#hopfield">John Hopfield</a></td></tr>
+    <tr><td class="st">10:10</td><td class="et">10:50</td><td class="vl"><a href="https://youtu.be/IksmSx856yY?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#brody">Carlos Brody</a></td></tr>
+    <tr><td class="st">10:50</td><td class="et">11:20</td><td class="ve"></td><td class="ds"><i>Coffee</i></td></tr>
     <tr class="vs"></tr>
-    <tr><td class="st">11:20</td><td class="et">12:00</td><td class="ds"><a href="#herz">Andreas Herz</a></td></tr>
-    <tr><td class="st">12:00</td><td class="et">12:40</td><td class="ds"><a href="#kristensson">Per Ola Kristensson</a></td></tr>
-    <tr><td class="st">12:40</td><td class="et">12:50</td><td class="ds"><a href="#blackwell">Alan Blackwell</a></td></tr>
-    <tr><td class="st">12:50</td><td class="et">13:00</td><td class="ds"><a href="#rem3"><i>Brief reminiscences III</i></a></td></tr>
-    <tr><td class="st">13:00</td><td class="et">14:00</td><td class="ds"><i>Lunch</i></td></tr>
+    <tr><td class="st">11:20</td><td class="et">12:00</td><td class="vl"><a href="https://youtu.be/pOK2vmv5l-c?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#herz">Andreas Herz</a></td></tr>
+    <tr><td class="st">12:00</td><td class="et">12:40</td><td class="vl"><a href="https://youtu.be/QpCJLaBImq0?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#kristensson">Per Ola Kristensson</a></td></tr>
+    <tr><td class="st">12:40</td><td class="et">12:50</td><td class="vl"><a href="https://youtu.be/QxFEUk3J89Q?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#blackwell">Alan Blackwell</a>*</td></tr>
+    <tr><td class="st">12:50</td><td class="et">13:00</td><td class="vl"><a href="https://youtu.be/7M1o7yeiPhg?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#rem3"><i>Brief reminiscences III</i></a></td></tr>
+    <tr><td class="st">13:00</td><td class="et">14:00</td><td class="ve"></td><td class="ds"><i>Lunch</i></td></tr>
     <tr class="vs"></tr>
-    <tr><td class="st">14:00</td><td class="et">14:40</td><td class="ds"><a href="#winn">John Winn</a></td></tr>
-    <tr><td class="st">14:40</td><td class="et">15:20</td><td class="ds"><a href="#murray">Iain Murray</a></td></tr>
-    <tr><td class="st">15:20</td><td class="et">16:00</td><td class="ds"><a href="#hinton">Geoff Hinton</a></td></tr>
-    <tr><td class="st">16:00</td><td class="et">16:30</td><td class="ds">Surprise talk</td></tr>
-    <tr><td class="st">16:30</td><td class="et">16:40</td><td class="ds">Closing remarks</td></tr>
+    <tr><td class="st">14:00</td><td class="et">14:40</td><td class="vl"><a href="https://youtu.be/jZgQGV2j9Bc?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#winn">John Winn</a></td></tr>
+    <tr><td class="st">14:40</td><td class="et">15:20</td><td class="vl"><a href="https://youtu.be/HhGJZmn-5SU?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#murray">Iain Murray</a></td></tr>
+    <tr><td class="st">15:20</td><td class="et">16:00</td><td class="vl"><a href="https://youtu.be/cBLk5baHbZ8?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds"><a href="#hinton">Geoff Hinton</a></td></tr>
+    <tr><td class="st">16:00</td><td class="et">16:30</td><td class="vl"><a href="https://youtu.be/psvTTNOJgfA?list=PLj4YiOgq320qPz946V9jE5xGfrNO6KSSI"></a></td><td class="ds">Surprise talk</td></tr>
+    <tr><td class="st">16:30</td><td class="et">16:40</td><td class="ve"></td><td class="ds">Closing remarks</td></tr>
     <tr class="vs"></tr>
     <!-- <tr><td class="st">16:30</td><td class="et">16:45</td><td class="ds"><i>Group photo</i></td></tr> -->
-    <tr><td class="st">16:30</td><td class="et">17:30</td><td class="ds"><i>Coffee and cake reception</i></td></tr>
-    <tr><td class="st">17:30</td><td class="et"></td><td class="ds"><i>Departure</i></td></tr>
+    <tr><td class="st">16:30</td><td class="et">17:30</td><td class="ve"></td><td class="ds"><i>Coffee and cake reception</i></td></tr>
+    <tr><td class="st">17:30</td><td class="et"></td><td class="ve"></td><td class="ds"><i>Departure</i></td></tr>
     </table>
   </div>
-
+  <br>
+  <small>*) not in the printed programme</small><br>
 </div>
 
 
