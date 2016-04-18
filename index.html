@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#117a72">
   <meta name="author" content="Christian Steinruecken">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
   <style type="text/css"><!--
   h1 { font-size: 200%; }
   h2 { font-size: 150%; }
@@ -139,7 +140,7 @@
   }
   @media screen {
     body {
-      font-family: sans-serif;
+      font-family: 'Liberation Sans', 'Arial', 'Roboto', sans-serif;
       font-size: 120%;
       margin:0;
       padding:0.5em 1em 0em 1em;
@@ -160,6 +161,7 @@
     ul.speakers li:after { content:', '; }
     ul.speakers li:last-child:after { content:'.'; }
     div.vidlink a:after { content:':  ' attr(href); }
+    a[href^='https://you']:after { content:':  ' attr(href); }
   }
   @media (max-width:35em) {
     ul.speakers { -webkit-column-count:1; column-count:1; }
